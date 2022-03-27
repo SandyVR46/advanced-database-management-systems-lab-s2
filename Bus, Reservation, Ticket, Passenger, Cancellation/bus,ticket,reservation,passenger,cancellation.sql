@@ -239,4 +239,4 @@ SQL> SELECT TICKET_NO
        122                                                                                                                                                                                              
 
 SQL> 
-SQL> spool off;
+
