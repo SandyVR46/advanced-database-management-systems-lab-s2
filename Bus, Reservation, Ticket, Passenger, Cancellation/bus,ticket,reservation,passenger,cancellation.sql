@@ -192,16 +192,8 @@ SQL> SELECT * FROM BUS;
        200 TVM                       KOCHI                     MINI-COACH                                                                                                                               
        202 PATNA                     COIMBATORE                VOLVO                                                                                                                                    
 
-SQL> SELECT PNR_NO FROM PASSENGER
-  2  INTERSECT
-  3  SELECT PNR_NO FROM CANCELLATION WHERE JOURNEY_DATE = '10-OCT-2019';
+SQL>SELECT NAME FROM PASSENGER, CANCELLATION WHERE JOURNEY_DATE = '10-OCT-2019' AND PASSENGER.PNR_NO = CANCELLATION.PNR_NO;
 
-    PNR_NO                                                                                                                                                                                              
-----------                                                                                                                                                                                              
-       182                                                                                                                                                                                              
-       183                                                                                                                                                                                              
-
-SQL> SELECT NAME FROM PASSENGER WHERE PNR_NO IN(182, 183);
 
 NAME                                                                                                                                                                                                    
 --------------------                                                                                                                                                                                    
